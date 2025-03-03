@@ -8,6 +8,6 @@ LiDAR point cloud streams provide precise 3D mapping and detailed spatial inform
 
 ## Interpolation Visualization
 <p align="center">
-  <img src="images/visualization_1.png" width="500"/>
-  <img src="images/visualization_2.png" width="500"/>
+  <img src="images/visualization_1.png" width="400"/>
+  <img src="images/visualization_2.png" width="400"/>
 </p>
