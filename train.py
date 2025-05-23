@@ -7,7 +7,7 @@ import torch.optim as optim
 import os
 import numpy as np
 import sys
-sys.path.append('/home/ubuntu/ypf/MoCoPCI')
+# sys.path.append('/home/ubuntu/ypf/MoCoPCI')
 from data.no_norm_datasets import NLDriveDataset
 from models.m_models.mocopci import MoCoPCI
 from models.utils import chamfer_loss
@@ -34,8 +34,6 @@ def parse_args(train_target='scene01'):
     parser.add_argument('--npoints', type=int, default=8192)
     parser.add_argument('--t_begin', type=float, default=0., help='Time stamp of the first input frame.')
     parser.add_argument('--t_end', type=float, default=1., help='Time stamp of the last input frame.')
-    parser.add_argument('--experiment_scene', type=str, default='02')
-    parser.add_argument('--experiment_name', type=str, default='frame_times01_no_gru')
     return parser.parse_args()
 
 
@@ -60,7 +58,7 @@ def train(args):
     LEARNING_RATE_CLIP = 0.00005
     train_start_time = datetime.now().strftime('%Y-%m-%d-%H-%M')
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu if args.multi_gpu is None else '0,1,2,3'
-    scene_list = '/home/ubuntu/FastPCI/data/NL-Drive/train_scene' + args.experiment_scene + '_list.txt'
+    scene_list =  args.scene_list + '_list.txt'
     train_dataset = NLDriveDataset(args.data_root, scene_list, args.npoints, args.interval, args.num_frames)
 
     train_loader = DataLoader(train_dataset,
