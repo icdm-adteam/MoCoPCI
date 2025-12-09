@@ -1,4 +1,4 @@
-# MoCoPCI: Inter-frame Motion Correlation Guided Efficient 3D Point Cloud Interpolation
+# [PR 2026] MoCoPCI: Inter-frame Motion Correlation Guided Efficient 3D Point Cloud Interpolation
 :wave: This is the official repository for *MoCoPCI: Inter-frame Motion Correlation Guided Efficient 3D Point Cloud Interpolation* accepted by **Pattern Recognition 2026**.
 
 ## Introduction
